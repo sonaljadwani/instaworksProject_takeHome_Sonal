@@ -1,6 +1,7 @@
 package stepdefinition;
 
 import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Properties;
 
@@ -87,8 +88,8 @@ public class SearchPageSteps {
 
 	@Then("I should see the title {string}")
 	public void i_should_see_the_title(String string) {
-	   String actualValue = driver.getTitle();
-	   assertEquals(string,actualValue);
+		 String actualValue = driver.getTitle();
+		 assertTrue(actualValue.contains(string));
 	}
 
 }

@@ -17,8 +17,8 @@ public class SearchPage {
 		private By departingCity = By.xpath("//button[@aria-label=\"Leaving from\"]");		
 		private By arrivingCity = By.xpath("//button[@aria-label=\"Going to\"]");
 		private By departingDate = By.xpath("//button[@id='d1-btn']");
-		private By selectArrDate = By.xpath("//button[starts-with(@aria-label , 'Aug 12')]");
-		private By selectDepDate = By.xpath("//button[starts-with(@aria-label , 'Aug 18')]");
+		private By selectArrDate = By.xpath("//button[starts-with(@aria-label , 'Aug 16')]");
+		private By selectDepDate = By.xpath("//button[starts-with(@aria-label , 'Aug 24')]");
 		private By done = By.xpath("//button[contains(.,'DoneSave changes')]");
 		private By searchButton = By.xpath("//button[@data-testid = \"submit-button\"]");
 		private By departingCityInput = By.xpath("//input[@id='location-field-leg1-origin']");
@@ -41,7 +41,7 @@ public class SearchPage {
 			}
 			WebElement departingInputElem = driver.findElement(departingCityInput);
 			departingInputElem.sendKeys("San Francisco (SFO - San Francisco Intl.)");
-			this.wait.until(ExpectedConditions.elementToBeClickable(listOfDepartingCities));
+			this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='location-field-leg1-origin-menu']//li//button")));
 			List<WebElement> elemList = driver.findElements(listOfDepartingCities);
 			elemList.get(0).click();
 		}
@@ -52,7 +52,7 @@ public class SearchPage {
 			}
 			WebElement arrivingInputElem = driver.findElement(arrivingCityInput);
 			arrivingInputElem.sendKeys("New York (NYC - All Airports)");
-			this.wait.until(ExpectedConditions.elementToBeClickable(listOfArrivingCities));
+			this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='location-field-leg1-destination-menu']//li//button")));
 			List<WebElement> arrList = driver.findElements(listOfArrivingCities);
 			arrList.get(1).click();
 		}
