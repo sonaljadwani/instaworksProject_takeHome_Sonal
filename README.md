@@ -9,6 +9,6 @@ src/main/java/com.util: contains of property file of the web application
 src/test/Features: contains all the feature files
 src/test/StepDefinitions: contains all the step definition files
 
-Running Test:
+Instructions for Running Test:
 If Java and Maven are not installed, please install Java. You can install maven from the below link: https://maven.apache.org/install.html
 You can run the test run using mvn test
