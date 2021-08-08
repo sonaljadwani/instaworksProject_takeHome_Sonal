@@ -1,5 +1,5 @@
 # instaworksProject_takeHome_Sonal
-Project Details: 
+Project Details Steps: 
 The project uses the BDD approach using Cucumber, Selenium, Java and maven. It is a hybrid framework based on POM(Project Object Model). This project will only run on Chrome.
 
 Framework Architecture:
